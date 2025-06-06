@@ -164,7 +164,7 @@ OUTPUT:"My house has 3 bedrooms while Mr. Derricks has 10"
 "My house is in Meredith, NH while Mr. Derricks is in Alton, NH"
 ```
 Bookmark 1:[https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/Main.java#L13
-](url)
+]
 
 Identity is demonstrated above by the two objects having different names, state is demonstrated by the number of bathrooms and bedrooms and the location of the house, and properties are demonstrated by the class methods.
 
@@ -255,10 +255,10 @@ Person mason = new Person(18, 65, masonsEyeColor);
 
 See Bookmark-2a and Bookmark-2b for an example of non primitive data construction
 Bookmark-2a: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/subsystems/FlapHook.java#L28 
-](url)
+]
 
 Bookmark-2b: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/RobotContainer.java#L72
-](url)
+]
 ## ***Modifiers*** {#modifiers}
 
  Just Like Data types, we can divide modifiers into two groups, Access Modifiers and Non Access Modifiers.  
@@ -278,14 +278,14 @@ There are also abstract, transient, synchronized, and volatile modifiers, but th
 
 Accessing attributes or variables of a class without referring to an object has applications. Sometimes you don't always want to make an object in your class. The LakerBots use the static modifier for every variable in our Constants.java file, as we don't want to create a Constants object for every place in code we want to reference one of the constants. This example can be found in Bookmark-3a and Bookmark-3b. An additional example can be found in Bookmark-3c and Bookmark-3d, notice how we don't create a RobotContainer object instance in ComplexCommands.java, but we can still access and reference its subsystems statically.
 
-Bookmark-3a: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/Constants.java#L51](url)
+Bookmark-3a: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/Constants.java#L51]
 
-Bookmark-3b: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/Commands/ComplexCommands.java#L166C9-L166C17](url)
+Bookmark-3b: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/Commands/ComplexCommands.java#L166C9-L166C17]
 
-Bookmark-3c: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/RobotContainer.java#L69](url)
+Bookmark-3c: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/RobotContainer.java#L69]
 
 Bookmark-3d: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/Commands/ComplexCommands.java#L15
-](url)
+]
 # ***The LakerBots Secret Sauce*** {#the-lakerbots-secret-sauce}
 
 Over the past couple of years, we have developed our own kind of programming paradigm. A set of standards and practices that when implemented into our code, introduces structure, format, and functionality. These practices were found via a process of iterative development. Each year of competition code, we have taken what we liked about the previous year's code, and introduced additional techniques and modes of thinking. This is expected to continue to happen, and over the years this section of the guide will become less and less relevant.
@@ -562,7 +562,7 @@ ControlType.kMAXMotionPositionControl
 	}
 }
 ```
-Bookmark-5: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/subsystems/Manipulator.java#L82](url)
+Bookmark-5: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/subsystems/Manipulator.java#L82]
 
 In the CTRE family of motors, we can use the MotionMagic framework. MotionMagic is very similar to MAXMotion, being a second degree PID controller. 
 
@@ -609,7 +609,7 @@ public Command elevatorGoToPosition(double setpoint){
 
 }
 ```
-Bookmark-6: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/subsystems/Elevator.java#L48](url)
+Bookmark-6: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/subsystems/Elevator.java#L48]
 
 MotionMagic also allows for on the fly switching of second degree profiles with the purchase of a Phoenix Pro license. Being able to switch between second degree PID profiles is useful when encountering a mechanism such as a linear elevator. In the 2025 codebase, there are implementations of both dynamic and non-dynamic MotionMagic present. The ladder being our first implementation of position control on the mechanism, which we found to work, but turning up the speeds for efficiency was a dangerous game, as the elevator had different forces acting on it depending on the direction of travel (it was fighting gravity on the way up, and being assisted by it on the way down). So we used two different profiles, one on the way up, and one on the way down.
 
@@ -710,7 +710,7 @@ public class ElevatorMoveDynamic extends Command {
 
 ```
 Bookmark-7: [https://github.com/comicsansgood/Lakerbots2025/blob/ace230b72e39154dcdf55b78e5fb4d0e937ce527/src/main/java/frc/robot/Commands/ElevatorMoveDynamic.java#L1
-](url)
+]
 
 Simple PID controllers can also be generated without the use of vendor dependencies:
 
