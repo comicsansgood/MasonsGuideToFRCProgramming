@@ -1,0 +1,1 @@
+This is a concise and detailed guide on FRC programming. It is intended to train future programmers of FRC Team 8046. This guide can viewed alternatively at https://docs.google.com/document/d/1DMp1ZqzaLNj9CzdIEbfEdjj1DOePfNHhwf5NEjGn7FE/edit?tab=t.0
